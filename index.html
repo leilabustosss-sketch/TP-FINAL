@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Taller Mecánico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>Taller Mecánico</h1>
+
+       
+        <div class="tarjeta">
+            <h2>Registrar Vehículo</h2>
+            
+            <label>Marca:</label>
+            <input type="text" id="marca">
+
+            <label>Modelo:</label>
+            <input type="text" id="modelo">
+
+            <label>Año (1886 - 2026):</label>
+            <input type="number" id="año">
+
+            <label>Matrícula:</label>
+            <input type="text" id="mat">
+
+            <label>Kilometraje:</label>
+            <input type="number" id="km">
+
+            <button onclick="registrar()">Guardar Vehículo</button>
+            <p id="error" class="error"></p>
+        </div>
+
+    
+        <div class="tarjeta">
+            <h2>Información Actual</h2>
+            <button onclick="ver()">Ver Datos</button>
+            <p id="info" class="info-texto">No hay datos registrados todavía.</p>
+        </div>
+
+ 
+        <div class="tarjeta">
+            <h2>Actualizar Datos</h2>
+            
+            <label>Nuevo Kilometraje:</label>
+            <div class="grupo-input">
+                <input type="number" id="nuevoKm">
+                <button onclick="cambiarKm()">Actualizar Km</button>
+            </div>
+
+            <label>Nueva Matrícula:</label>
+            <div class="grupo-input">
+                <input type="text" id="nuevaMat">
+                <button onclick="cambiarMat()">Cambiar Matrícula</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
